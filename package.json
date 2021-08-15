@@ -1,0 +1,41 @@
+{
+  "name": "probat_installer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "build:exe": "pkg ."
+  },
+  "pkg": {
+    "scripts": "dist/**/*.js",
+    "targets": [
+      "node14-win-x64"
+    ],
+    "outputPath": "build"
+  },
+  "bin": "dist/index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/figlet": "^1.5.4",
+    "@types/prompts": "^2.0.14",
+    "@types/shelljs": "^0.8.9",
+    "nodemon": "^2.0.12",
+    "pkg": "^5.3.1",
+    "ts-node": "^10.2.0",
+    "tsc": "^2.0.3",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "figlet": "^1.5.2",
+    "generate-password": "^1.6.1",
+    "ora": "^5.4.1",
+    "prompts": "^2.4.1",
+    "shelljs": "^0.8.4"
+  }
+}
